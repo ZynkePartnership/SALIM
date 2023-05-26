@@ -1,0 +1,153 @@
+/*----Usuários de Display: flex----*/
+.main-container,
+aside, aside .title, .opcao, .opcao-descricao, .opcoes,
+article, .login, .cadastro, .title, .form-container, form, .email, .idade, .usuario, .senha, .usuario label, .senha label, .form-btn,
+.show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----Main----*/
+main{
+    height: 86vh;
+}
+
+.main-container{
+    flex-wrap: wrap;
+    height: 90%;
+    width: 50%;
+}
+
+/*-----==ASIDE==-----*/
+aside{
+    flex-wrap: wrap;
+    width: 25em;    
+    height: 25%;
+    border:solid 0.2px rgb(184, 184, 184);
+    border-radius: 1em;
+    box-shadow: 5px 5px 30px rgb(104, 104, 104);
+}
+aside .title{
+    height: 25%;
+}
+.opcao{
+    flex-wrap: wrap;
+    height: 85%;
+    width: 100%;
+}
+
+.opcao-descricao{
+    flex-wrap: wrap;
+    height: 35%;
+    width: 60%;
+    text-align: center;
+}
+.opcoes{
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 40%;
+    width: 60%;
+}
+.opcoes button{
+    width: 9em;
+    height: 3em;
+    background-color: var(--primary-orange);
+    color: white;
+    border: solid .5px white;
+    border-radius: .5em;
+    transition: .3s;
+}
+.opcoes button:hover{
+    cursor: pointer;
+    background-color: var(--light-orange);
+}
+
+
+.show{
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+}
+/*-----==ARTICLE==-----*/
+article{
+    width: 35em;
+    height: 70%;
+    border:solid 0.2px rgb(184, 184, 184);
+    border-radius: 1em;
+    box-shadow: 5px 5px 30px rgb(104, 104, 104);
+}
+
+fieldset{
+    border: none;
+}
+
+form{
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    height: 25%;
+    width: 100%;
+}
+
+.form-container{
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 75%;
+    width: 100%;
+}
+
+.form-btn{
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 14%;
+    width: 70%;
+}
+
+/*--=LOGIN=--*/
+.escondido{
+    display: none;
+}
+.login .usuario, .login .senha{
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 30%;
+    width: 70%;
+}
+.usuario input, .senha input{
+    height: 2em;
+    width: 100%;
+}
+
+/*--=CADASTRO=--*/
+.cadastro .title{
+    height: 16%;
+}
+
+.cadastro form{
+    justify-content: space-evenly;
+}
+
+.cadastro .email, .cadastro .idade, .cadastro .usuario, .cadastro .senha{
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 20%;
+    width: 75%;
+}
+.cadastro .email{
+    width: 45%;
+}
+.cadastro .idade{
+    width: 20%;
+}
+.email input, .idade input, .usuario input, .senha input{
+    height: 2em;
+    width: 100%;
+}

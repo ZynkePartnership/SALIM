@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial</title>
+    <link rel="stylesheet" href="../css/universal.css">
+    <link rel="stylesheet" href="../css/conta.css">
+</head>
+
+<body>    
+    <header>
+        <div class="logo">
+            <figure class="logo-img-container">
+                <img src="../img/LamarcLogo.png" alt="LamarcLogo" class="logo-img">
+            </figure>
+
+            <div class="ham-btn">
+                <span class="ham-btn-bar"></span>
+                <span class="ham-btn-bar"></span>
+                <span class="ham-btn-bar"></span>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-content">
+                <li>
+                    <a href="../index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="eventos.html">EVENTOS</a>
+                </li>
+                <li>
+                    <a href="contato.html">CONTATO</a>
+                </li>
+                <li>
+                    <a class="active" href="conta.html">CONTA</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <aside>
+                <div class="title">
+                    <h2>ACESSO</h2>
+                </div>
+
+                <div class="opcao">
+                    <div class="opcao-descricao">
+                        <h2>Não tem conta? Crie uma</h2>
+                    </div>
+                    <div class="opcoes">
+                        <button href="#login">LOGIN</button>
+                        <button href="#cadastro">CADASTRAR</button>
+                    </div>
+                </div>
+            </aside>
+
+            <article>
+                <section id ="login" class="login show">
+                    <div class="title">
+                        <h2>LOGIN</h2>
+                    </div>
+
+                    <div class="form-container">
+                        <form action="">
+                            <fieldset class="usuario">
+                                <label for="usuario">Usuário</label>
+                                <input type="text" name="usuario" id="usuario">
+                            </fieldset>
+
+                            <fieldset class="senha">
+                                <label for="senha">Senha</label>
+                                <input type="password" name="senha" id="senha">
+                            </fieldset>
+
+                            <fieldset class="form-btn">
+                                <button type="submit">LOGIN</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+
+                <section id="cadastro" class="cadastro escondido">
+                    <div class="title">
+                        <h2>CADASTRO</h2>
+                    </div>
+
+                    <div class="form-container">
+                        <form action="">
+                            <fieldset class="email">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email">
+                            </fieldset>
+
+                            <fieldset class="idade">
+                                <label for="idade">Idade</label>
+                                <input type="number" name="idade" id="idade">
+                            </fieldset>
+
+                            <fieldset class="usuario">
+                                <label for="usuario">Usuário</label>
+                                <input type="text" name="usuario" id="usuario">
+                            </fieldset>
+
+                            <fieldset class="senha">
+                                <label for="senha">Senha</label>
+                                <input type="password" name="senha" id="senha">
+                            </fieldset>
+
+                            <fieldset class="form-btn">
+                                <button type="submit">CADASTRAR</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <span>LAMARC | LoriaLawrenceZ</span>
+    </footer>
+</body>
+
+<script src="../js/conta.js"></script>
+
+</html>
