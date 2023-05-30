@@ -1,0 +1,189 @@
+/*-----===MAIN===-----*/
+main{
+    background-color: white;
+    height: 150vh;
+}
+
+/*-----===ARTICLE===-----*/
+article{
+    height: 95%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*---==Carousel Categorias==---*/
+.carousel-categorias{
+    background-color: aquamarine;
+    min-height: 10em;
+    height: 20%;
+    min-width: 60em;
+    width: 90%;
+}
+
+
+/*---==Card Destaque==---*/
+.eventos-destaque{
+    min-height: 35em;
+    height: 30%;
+    min-width: 60em;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.eventos-destaque h2:first-child{
+    height: 10%;
+    width: 95%;
+}
+
+.card-destaque{
+    box-shadow: 0px 0px 20px lightgray;
+    height: 90%;
+    width: 100%;
+    border-radius: 1.5em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.card-img{
+    background-color: turquoise;
+    height: 100%;
+    width: 68%;
+    border-radius: 1.5em;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card-descricao{
+    height: 100%;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*--=Card Descrição=--*/
+.descricao-cabecalho{
+    height: 35%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+/*-Cabeçalho-*/
+.cabecalho-data-hora, .cabecalho-titulo, .cabecalho-local{
+    min-height: 3em;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.cabecalho-data-hora{
+    color:dodgerblue;
+    font-weight: bolder;
+    align-items: end;
+}
+.cabecalho-titulo{
+    font-size: 28px;
+}
+.cabecalho-local{
+    align-items: start;
+    color: darkgrey;
+    font-size: 16px;
+}
+/*-Botão-*/
+.descricao-btn-container{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-btn{
+    cursor: pointer;
+    color: dodgerblue;
+    font-weight: bolder;
+    font-size: 18px;
+
+    background: white;
+    border: solid 1px dodgerblue;
+    border-radius: .5em;
+    min-height: 3.5em;
+    min-width: 10.5em;
+
+    transition: .3s;
+}
+
+/*---==Eventos da Semana==---*/
+.eventos-semana{
+    min-height: 20em;
+    height: 25%;
+    min-width: 60em;
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.eventos-semana h2:first-child{
+    height: 20%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.card-semana{
+    height: 75%;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    border-radius: .75em;
+    overflow: hidden;
+    transition: .3s;
+}
+.semana-img{
+    background-color: cyan;
+    height: 65%;
+    width: 100%;
+    border-radius: .75em;
+    overflow: hidden;
+    transition: .3s;
+}
+.semana-descricao{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+.semana-data-hora, .semana-titulo, .semana-local{
+    width: 95%;
+}
+
+/*-------====EFEITOS====-------*/
+.card-destaque:hover{
+    box-shadow: 0px 0px 20px lightslategrey;
+}
+.card-btn:hover{
+    color: white;
+    background-color: dodgerblue;
+}
+
+.card-semana:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px lightgray;
+}
+.card-semana:has(:hover) .semana-img{
+    border-radius: 0;
+}
