@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}
+
+/*-----===HEADER===-----*/
+header,
+.logo,
+nav, .nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    background-color: grey;
+    justify-content: space-between;
+    height: 8vh;
+}
+
+.logo{
+    height: 100%;
+    width: 25%;
+}
+
+nav{
+    height: 100%;
+    width: 60%;
+}
+.nav-content{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.conta{
+    height: 4em;
+    width: 4em;
+    background-color: aquamarine;
+    border-radius: 4.5em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conta a{
+    width: 100%;
+    height: 100%;
+}
+
+/*-----===MAIN===-----*/
+main{
+    min-height: 57vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----===FOOTER===-----*/
+footer,
+.footer-links,
+.mapa, .eventos, .seja-produtor, .cidades,
+.footer-redes ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer{
+    height: 35vh;
+    background-color: grey;
+}
+
+.footer-links{
+    height: 70%;
+    width: 95%;
+    justify-content: space-around;
+    border-top: solid 2px rgb(210, 210, 210);
+}
+
+.mapa, .eventos, .seja-produtor, .cidades{
+    height: 90%;
+    width: 20%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.mapa h2, .eventos h2, .seja-produtor h2, .cidades h2{
+    height: 15%;
+    width: 90%;
+    text-align: center;
+    border-bottom: solid 1px rgb(175, 175, 175);
+}
+.mapa ul, .eventos ul, .seja-produtor ul, .cidades ul{
+    height: 85%;
+    width: 90%;
+    list-style: none;
+}
+.mapa li, .eventos li, .seja-produtor li, .cidades li{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footer-redes{
+    height: 10%;
+    width: 95%;
+    border-top: solid 2px rgb(210, 210, 210);
+}
+.footer-redes ul{
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+}
