@@ -12,9 +12,10 @@ nav, .nav-content{
 }
 
 header{
+    min-height: 5em;
+    height: 8vh;
     background-color: grey;
     justify-content: space-between;
-    height: 8vh;
 }
 
 .logo{
@@ -50,7 +51,8 @@ nav{
 
 /*-----===MAIN===-----*/
 main{
-    min-height: 57vh;
+    min-height: 75em;
+    height: 57vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,6 +70,7 @@ footer,
 }
 
 footer{
+    min-height: 25em;
     height: 35vh;
     background-color: grey;
 }

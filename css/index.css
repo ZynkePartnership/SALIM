@@ -1,13 +1,13 @@
 /*-----===MAIN===-----*/
 main{
     background-color: white;
-    height: 150vh;
+    height: 80em;
 }
 
 /*-----===ARTICLE===-----*/
 article{
-    height: 95%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,21 +15,74 @@ article{
 }
 
 /*---==Carousel Categorias==---*/
-.carousel-categorias{
-    background-color: aquamarine;
-    min-height: 10em;
-    height: 20%;
+.carousel-categorias-container{
+    min-height: 13em;
+    height: 15%;
     min-width: 60em;
-    width: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+/*--=Categorias=--*/
+.carousel-categorias-container h2{
+    height: 15%;
+    min-width: 51.5em;
+    width: 95%;
+    display: flex;
+    align-items: start;
+}
+.carousel-categorias{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.categoria{
+    height: 95%;
+    min-width: 170px;
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s;
+}
+.categoria-img{
+    height: 75%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.categoria-img div{
+    max-width: 9.5em;
+    height: 100%;
+    width: 100%;
+    border-radius: 160px;
+    background-color: cyan;
+    cursor: pointer;
 }
 
+.categoria-descricao{
+    height: 25%;
+    width: 90%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 16px;
+    color: darkgray;
+    cursor: pointer;
+}
 
 /*---==Card Destaque==---*/
 .eventos-destaque{
     min-height: 35em;
     height: 30%;
     min-width: 60em;
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -126,7 +179,7 @@ article{
     min-height: 20em;
     height: 25%;
     min-width: 60em;
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: start;
     justify-content: space-around;
@@ -172,6 +225,11 @@ article{
 }
 
 /*-------====EFEITOS====-------*/
+.categoria:hover{
+    border-radius: 1em;
+    transform: scale(1.1);
+}
+
 .card-destaque:hover{
     box-shadow: 0px 0px 20px lightslategrey;
 }
