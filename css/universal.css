@@ -51,8 +51,7 @@ nav{
 
 /*-----===MAIN===-----*/
 main{
-    min-height: 75em;
-    height: 57vh;
+    min-height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
