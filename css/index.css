@@ -22,28 +22,53 @@ article{
     width: 95%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 }
 /*--=Categorias=--*/
-.carousel-categorias-container h2{
+.carousel-cabecalho{
     height: 15%;
-    min-width: 51.5em;
+    min-width: 50em;
     width: 95%;
     display: flex;
     align-items: start;
+    justify-content: space-between;
 }
-.carousel-categorias{
-    height: 85%;
-    width: 100%;
+.carousel-cabecalho-btn{
+    height: 100%;
+    width: 80px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+.carousel-cabecalho button{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: solid 3px dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: dodgerblue;
+    font-weight: bolder;
+    background-color: white;
+}
+
+.carousel-categorias{
+    height: 85%;
+    min-width: 1024px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    overflow: visible;
+}
 .categoria{
     height: 95%;
     min-width: 170px;
-    width: 19%;
+    width: 12.5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +77,7 @@ article{
 }
 .categoria-img{
     height: 75%;
-    width: 60%;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,7 +252,7 @@ article{
 /*-------====EFEITOS====-------*/
 .categoria:hover{
     border-radius: 1em;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .card-destaque:hover{
