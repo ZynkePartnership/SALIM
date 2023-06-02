@@ -1,11 +1,11 @@
 /*-----===MAIN===-----*/
-main{
+main {
     background-color: white;
     height: 80em;
 }
 
 /*-----===ARTICLE===-----*/
-article{
+article {
     height: 100%;
     width: 100%;
     display: flex;
@@ -15,102 +15,94 @@ article{
 }
 
 /*---==Carousel Categorias==---*/
-.carousel-categorias-container{
-    min-height: 13em;
-    height: 15%;
-    min-width: 60em;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+/*--=Categorias=--*/
+.carousel-categorias-container {
+    position: relative;
+    min-height: 15em;
+    height: 20%;
+    width: 90%;
     overflow: hidden;
 }
-/*--=Categorias=--*/
-.carousel-cabecalho{
+
+.carousel-cabecalho {
     height: 20%;
-    min-width: 50em;
-    width: 95%;
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-}
-.carousel-cabecalho-btn{
-    height: 100%;
-    width: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-.carousel-cabecalho button{
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
+.prvItem,
+.nxtItem {
+    height: 2em;
+    width: 2em;
     border: solid 3px dodgerblue;
+    border-radius: 1.5em;
+    color: dodgerblue;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: white;
+    cursor: pointer;
+}
+
+.prvItem.disabled,
+.nxtItem.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.carousel-visible{
+    height: 80%;
+}
+.carousel {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 20%;
+    /* Defina a largura do item do carrossel aqui */
+    height: 100%;
+    width: 100%;
+}
+
+.categoria {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: dodgerblue;
-    font-weight: bolder;
-    background-color: white;
-}
-.nxtItem.disabledN, .prvItem.disabledP{
-    color: gray;
-    border: solid 3px gray;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
 }
 
-.carousel-categorias{
+.categoria-img {
     height: 80%;
-    min-width: 1024px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    overflow: visible;
-    position: relative;
-    transition: left 0.3s ease;
-}
-.categoria{
-    min-height: 160px;
-    height: 90%;
-    min-width: 160px;
-    width: 12.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transition: .3s;
-}
-.categoria-img{
-    height: 75%;
-    width: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .categoria-img div{
-    max-width: 9.5em;
-    height: 100%;
-    width: 100%;
-    border-radius: 160px;
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
     background-color: cyan;
-    cursor: pointer;
+}
+.categoria-descricao{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(120, 120, 120);
 }
 
-.categoria-descricao{
-    height: 25%;
-    width: 90%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    font-size: 16px;
-    color: darkgray;
-    cursor: pointer;
-}
+
 
 /*---==Card Destaque==---*/
-.eventos-destaque{
+.eventos-destaque {
     min-height: 35em;
     height: 30%;
     min-width: 60em;
@@ -120,12 +112,13 @@ article{
     justify-content: end;
     flex-wrap: wrap;
 }
-.eventos-destaque h2:first-child{
+
+.eventos-destaque h2:first-child {
     height: 10%;
     width: 95%;
 }
 
-.card-destaque{
+.card-destaque {
     box-shadow: 0px 0px 20px lightgray;
     height: 90%;
     width: 100%;
@@ -137,7 +130,7 @@ article{
     transition: .3s;
 }
 
-.card-img{
+.card-img {
     background-color: turquoise;
     height: 100%;
     width: 68%;
@@ -145,7 +138,8 @@ article{
     overflow: hidden;
     cursor: pointer;
 }
-.card-descricao{
+
+.card-descricao {
     height: 100%;
     width: 32%;
     display: flex;
@@ -155,15 +149,18 @@ article{
 }
 
 /*--=Card Descrição=--*/
-.descricao-cabecalho{
+.descricao-cabecalho {
     height: 35%;
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
+
 /*-Cabeçalho-*/
-.cabecalho-data-hora, .cabecalho-titulo, .cabecalho-local{
+.cabecalho-data-hora,
+.cabecalho-titulo,
+.cabecalho-local {
     min-height: 3em;
     height: 20%;
     width: 100%;
@@ -171,27 +168,32 @@ article{
     align-items: center;
     justify-content: flex-start;
 }
-.cabecalho-data-hora{
-    color:dodgerblue;
+
+.cabecalho-data-hora {
+    color: dodgerblue;
     font-weight: bolder;
     align-items: end;
 }
-.cabecalho-titulo{
+
+.cabecalho-titulo {
     font-size: 28px;
 }
-.cabecalho-local{
+
+.cabecalho-local {
     align-items: start;
     color: darkgrey;
     font-size: 16px;
 }
+
 /*-Botão-*/
-.descricao-btn-container{
+.descricao-btn-container {
     height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.card-btn{
+
+.card-btn {
     cursor: pointer;
     color: dodgerblue;
     font-weight: bolder;
@@ -207,7 +209,7 @@ article{
 }
 
 /*---==Eventos da Semana==---*/
-.eventos-semana{
+.eventos-semana {
     min-height: 20em;
     height: 25%;
     min-width: 60em;
@@ -217,7 +219,8 @@ article{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.eventos-semana h2:first-child{
+
+.eventos-semana h2:first-child {
     height: 20%;
     width: 90%;
     display: flex;
@@ -225,7 +228,7 @@ article{
     justify-content: start;
 }
 
-.card-semana{
+.card-semana {
     height: 75%;
     width: 23%;
     display: flex;
@@ -236,7 +239,8 @@ article{
     overflow: hidden;
     transition: .3s;
 }
-.semana-img{
+
+.semana-img {
     background-color: cyan;
     height: 65%;
     width: 100%;
@@ -244,7 +248,8 @@ article{
     overflow: hidden;
     transition: .3s;
 }
-.semana-descricao{
+
+.semana-descricao {
     height: 35%;
     width: 100%;
     display: flex;
@@ -252,28 +257,32 @@ article{
     align-items: end;
     justify-content: center;
 }
-.semana-data-hora, .semana-titulo, .semana-local{
+
+.semana-data-hora,
+.semana-titulo,
+.semana-local {
     width: 95%;
 }
 
 /*-------====EFEITOS====-------*/
-.categoria:hover{
-    border-radius: 1em;
+.categoria:hover {
     transform: scale(1.05);
 }
 
-.card-destaque:hover{
+.card-destaque:hover {
     box-shadow: 0px 0px 20px lightslategrey;
 }
-.card-btn:hover{
+
+.card-btn:hover {
     color: white;
     background-color: dodgerblue;
 }
 
-.card-semana:hover{
+.card-semana:hover {
     cursor: pointer;
     box-shadow: 0px 0px 15px lightgray;
 }
-.card-semana:has(:hover) .semana-img{
+
+.card-semana:has(:hover) .semana-img {
     border-radius: 0;
 }

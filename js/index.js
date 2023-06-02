@@ -1,57 +1,53 @@
-/*-----==Variáveis==-----*/
-const carouselCategorias = document.querySelector(".carousel-categorias");
-const previousItem = document.querySelector(".prvItem");
-const nextItem = document.querySelector(".nxtItem");
+const carouselVisible = document.querySelector(".carousel-visible");
+const carousel = carouselVisible.querySelector(".carousel");
+const prevButton = document.querySelector(".prvItem");
+const nextButton = document.querySelector(".nxtItem");
+const itemWidth = carousel.querySelector(".carousel-item").offsetWidth;
+const maxIndex = Math.floor(carousel.scrollWidth / itemWidth) - 1;
 
-/*-----==Eventos==-----*/
-window.addEventListener("load", checkLastItem);
-nextItem.addEventListener('click', () => {
-    const currentPosition = parseInt(carouselCategorias.style.left) || 0;
+let currentIndex = 0;
 
-    const newPosition = currentPosition - 160;
-
-    carouselCategorias.style.left = newPosition + "px";
-    
-    checkLastItem();
-});
-previousItem.addEventListener('click', () => {
-    const currentPosition = parseInt(carouselCategorias.style.left) || 0;
-
-    const newPosition = currentPosition + 160;
-
-    carouselCategorias.style.left = newPosition + "px";
-
-    checkLastItem();
-});
-
-/*-----==Funções==-----*/
-
-//CHATGPT
-
-// Verifica se o carrossel está no último item
-function checkLastItem() {
-    const currentPosition = parseInt(carouselCategorias.style.left) || 0;
-    const widthContainer = document.querySelector(".carousel-categorias-container").scrollWidth;
-    const widthCarousel = carouselCategorias.offsetWidth;
-    const lastVisibleItemPosition = widthContainer - widthCarousel;
-
-    if(currentPosition < -lastVisibleItemPosition){
-        nextItem.classList.add("disabledN");
-        nextItem.disabled = true;
-    }
-    else{
-        nextItem.classList.remove("disabledN");
-        nextItem.disabled = false;
-    }
-
-
-
-    if(currentPosition >= 0){
-        previousItem.classList.add("disabledP");
-        previousItem.disabled = true;
-    }
-    else{
-        previousItem.classList.remove("disabledP");
-        previousItem.disabled = false;
-    }
+function moveToNextItem() {
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+  }
+  checkLastItem();
 }
+
+function moveToPrevItem() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+  }
+  checkLastItem();
+}
+
+function checkLastItem() {
+    const containerWidth = carouselVisible.offsetWidth;
+    const visibleItems = Math.floor(containerWidth / itemWidth);
+    const maxVisibleIndex = Math.floor(carousel.scrollWidth / itemWidth) - visibleItems;
+  
+    if (currentIndex >= maxVisibleIndex) {
+      nextButton.classList.add("disabled");
+      nextButton.disabled = true;
+    } else {
+      nextButton.classList.remove("disabled");
+      nextButton.disabled = false;
+    }
+  
+    if (currentIndex === 0) {
+      prevButton.classList.add("disabled");
+      prevButton.disabled = true;
+    } else {
+      prevButton.classList.remove("disabled");
+      prevButton.disabled = false;
+    }
+  }
+  
+
+nextButton.addEventListener("click", moveToNextItem);
+prevButton.addEventListener("click", moveToPrevItem);
+
+// Verificar estado inicial do carrossel
+checkLastItem();
