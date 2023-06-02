@@ -2,6 +2,7 @@
 main {
     flex-direction: column;
     flex-grow: 1;
+    background-color: aquamarine;
 }
 
 article {
@@ -13,54 +14,102 @@ article {
     justify-content: space-between;
     flex-direction: column;
     border-radius: 2em;
-    border: solid 1px black;
+    border: none;
     overflow: hidden;
     flex-grow: 1;
+    background-color: white;
 }
 
 .formulario-container {
+    height: 30em;
     width: 100%;
     padding: 2em;
-    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-cabecalho{
+    width: 100%;
+    height: 15%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
 }
 
 form {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    height: 20%;
+    min-width: 7em;
+    width: 70%;
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.data-evento, .tipo-evento{width: 35%;}
+.data-evento input, .tipo-evento input{ width: 90%;}
+.finalizar-evento{
+    height: 25%;
+    width: 50%;
+    flex-direction: row;
+    justify-content: center;
+}
 
-fieldset {
-    margin-bottom: 1em;
-    border: none;
+fieldset span{
+    display: none;
+    padding: 10px 40px;
+    margin-bottom: 10px;
+    background-color: red;
+    transition: all .5s ease;
 }
 
 fieldset label {
     font-weight: bold;
+    width: 90%;
 }
-
 fieldset input,
 fieldset select {
     width: 100%;
-    padding: 0.5em;
-    margin-top: 0.5em;
+    padding: 1em;
     border: 1px solid #ccc;
-    border-radius: 0.5em;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+#nome.errado, #data.errado, #tipo.errado, #local.errado{
+    border: solid 3px red;
 }
 
 fieldset input[type="submit"],
 fieldset input[type="reset"] {
-    width: auto;
-    padding: 0.5em 1em;
-    margin-top: 1em;
-    background-color: cadetblue;
-    color: white;
-    border: none;
-    border-radius: 0.5em;
+    max-width: 11em;
+    width: 30%;
+    height: 55%;
+    margin: 0 1em;
+    font-weight: bolder;
+    font-size: 24px;
+    color: dodgerblue;
+    background-color: white;
+    border: solid 3px dodgerblue;
+    border-radius: 3em;
     cursor: pointer;
+    padding: 0;
+    transition: .3s;
 }
 
 #eventos-criados{
+    border-top: solid 1px lightgray;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,6 +125,7 @@ fieldset input[type="reset"] {
     margin: 1em 0;
     height: 10em;
     width: 95%;
+    background-color: white;
     border-radius: 3em;
     box-shadow: 0 0 15px lightgray;
     display: flex;
@@ -137,7 +187,11 @@ fieldset input[type="reset"] {
 /*-----===EFEITOS===-----*/
 .card-btn button:hover{
     color: white;
-    border: solid 3px white;
     border-radius: 2.5em;
+    background-color: dodgerblue;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover{
+    color: white;
     background-color: dodgerblue;
 }

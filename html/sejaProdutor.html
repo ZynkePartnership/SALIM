@@ -45,15 +45,19 @@
     <main>
         <article>
             <section class="formulario-container">
+                <div class="form-cabecalho">
+                    <h1>CRIE SEU EVENTO</h1>
+                </div>
+
                 <form action="">
+                    <fieldset class="nome-evento">
+                        <label for="nome">Nome do Evento</label>
+                        <input type="text" name="nome" id="nome" value="Digite aqui...">
+                    </fieldset>
+
                     <fieldset class="data-evento">
                         <label for="data">Data do Evento</label>
                         <input type="datetime-local" name="data" id="data">
-                    </fieldset>
-
-                    <fieldset class="nome-evento">
-                        <label for="nome">Nome do Evento</label>
-                        <input type="text" name="nome" id="nome">
                     </fieldset>
 
                     <fieldset class="tipo-evento">
@@ -69,7 +73,7 @@
 
                     <fieldset class="local-evento">
                         <label for="local">Local do Evento</label>
-                        <input type="text" name="local" id="local">
+                        <input type="text" name="local" id="local" value="Digite aqui...">
                     </fieldset>
 
                     <fieldset class="finalizar-evento">
@@ -83,7 +87,7 @@
                 <div class="eventos-criados-cabecalho">
                     <h2>Seus Eventos</h2>
                 </div>
-                
+
             </section>
         </article>
     </main>
