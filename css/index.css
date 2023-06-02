@@ -1,6 +1,5 @@
 /*-----===MAIN===-----*/
 main {
-    background-color: white;
     height: 80em;
 }
 
@@ -11,7 +10,8 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 /*---==Carousel Categorias==---*/

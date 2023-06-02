@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="../css/universal.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/sejaProdutor.css">
 </head>
 
 <body>
@@ -43,6 +43,49 @@
     </header>
 
     <main>
+        <article>
+            <section class="formulario-container">
+                <form action="">
+                    <fieldset class="data-evento">
+                        <label for="data">Data do Evento</label>
+                        <input type="datetime-local" name="data" id="data">
+                    </fieldset>
+
+                    <fieldset class="nome-evento">
+                        <label for="nome">Nome do Evento</label>
+                        <input type="text" name="nome" id="nome">
+                    </fieldset>
+
+                    <fieldset class="tipo-evento">
+                        <label for="tipo">Tipo de Evento</label>
+                        <select name="tipo" id="tipo">
+                            <option value="">Escolha um Tipo</option>
+                            <option value="Comédia">Comédia</option>
+                            <option value="Teatro">Teatro</option>
+                            <option value="Infantil">Infantil</option>
+                            <option value="Workshop">Workshop</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset class="local-evento">
+                        <label for="local">Local do Evento</label>
+                        <input type="text" name="local" id="local">
+                    </fieldset>
+
+                    <fieldset class="finalizar-evento">
+                        <input type="submit" value="Criar">
+                        <input type="reset" value="Cancelar">
+                    </fieldset>
+                </form>
+            </section>
+
+            <section id="eventos-criados">
+                <div class="eventos-criados-cabecalho">
+                    <h2>Seus Eventos</h2>
+                </div>
+                
+            </section>
+        </article>
     </main>
 
     <footer>
@@ -97,5 +140,7 @@
         </div>
     </footer>
 </body>
+
+<script src="../js/sejaProdutor.js"></script>
 
 </html>

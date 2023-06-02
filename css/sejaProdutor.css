@@ -1,0 +1,143 @@
+/*-----===MAIN===-----*/
+main {
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+article {
+    margin: 2.5% 0;
+    min-width: 900px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 2em;
+    border: solid 1px black;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.formulario-container {
+    width: 100%;
+    padding: 2em;
+    background-color: aquamarine;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    margin-bottom: 1em;
+    border: none;
+}
+
+fieldset label {
+    font-weight: bold;
+}
+
+fieldset input,
+fieldset select {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+}
+
+fieldset input[type="submit"],
+fieldset input[type="reset"] {
+    width: auto;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+#eventos-criados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.eventos-criados-cabecalho{
+    height: 5em;
+    width: 85%;
+    display: flex;
+    align-items: center;
+}
+.event-card{
+    margin: 1em 0;
+    height: 10em;
+    width: 95%;
+    border-radius: 3em;
+    box-shadow: 0 0 15px lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-detalhe{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+.card-detalhe span, .card-detalhe h3, .card-detalhe p{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.card-detalhe span{
+    height: 15%;
+    font-size: 18px;
+    font-weight: bolder;
+    color: dodgerblue;
+}
+.card-detalhe p{
+    height: 15%;
+    font-size: 16px;
+    color: darkgray;
+}
+.card-detalhe h3{
+    height: 35%;
+    font-size: 28px;
+}
+
+.card-btn{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-btn button{
+    height: 30%;
+    width: 40%;
+    font-size: 16px;
+    font-weight: bolder;
+    color: dodgerblue;
+    border: solid 3px dodgerblue;
+    border-radius: 2.5em;
+    background-color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/*-----===EFEITOS===-----*/
+.card-btn button:hover{
+    color: white;
+    border: solid 3px white;
+    border-radius: 2.5em;
+    background-color: dodgerblue;
+}
