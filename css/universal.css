@@ -14,7 +14,7 @@ nav, .nav-content{
 header{
     min-height: 5em;
     height: 8vh;
-    background-color: grey;
+    background-color: slateblue;
     justify-content: space-between;
 }
 
@@ -71,7 +71,7 @@ footer,
 footer{
     min-height: 25em;
     height: 35vh;
-    background-color: grey;
+    background-color: slateblue;
 }
 
 .footer-links{
