@@ -44,16 +44,76 @@
 
     <main>
         <article>
+            <span class="icon-close"><ion-icon name="close">
+                </ion-icon>
+            </span>
+
             <section id="login">
-                <div class="cabecalho">
-                    <h2>Login</h2>
-                </div>
+                <h2>Login</h2>
+
+                <form action="#">
+                    <fieldset class="campo-email">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" name="email" id="email" autofocus required>
+                        <label for="email">Email</label>
+                    </fieldset>
+
+                    <fieldset class="campo-senha">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" name="senha" id="senha" required>
+                        <label for="email">Senha</label>
+                    </fieldset>
+
+                    <fieldset class="campo-checkbox">
+                        <label for="lembrar">
+                            <input type="checkbox" name="lembrar" id="lembrar">Lembre-se de mim
+                        </label>
+                        <a href="#">Esqueceu a senha?</a>
+                    </fieldset>
+
+                    <button type="submit" class="submit-btn">Login</button>
+
+                    <fieldset class="login-cadastro">
+                        <p>Não tem uma conta? <a href="#" class="link-cadastro">Cadastro</a></p>
+                    </fieldset>
+                </form>
             </section>
 
             <section id="cadastro">
-                <div class="cabecalho">
-                    <h2>Cadastro</h2>
-                </div>
+                <h2>Cadastro</h2>
+
+                <form action="#">
+                    <fieldset class="campo-usuario">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" name="user" id="user" autofocus required>
+                        <label for="user">Usuario</label>
+                    </fieldset>
+
+                    <fieldset class="campo-email">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" name="email" id="email"required>
+                        <label for="email">Email</label>
+                    </fieldset>
+
+                    <fieldset class="campo-senha">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" name="senha" id="senha" required>
+                        <label for="email">Senha</label>
+                    </fieldset>
+
+                    <fieldset class="campo-checkbox">
+                        <label for="lembrar">
+                            <input type="checkbox" name="lembrar" id="lembrar">Lembre-se de mim
+                        </label>
+                        <a href="#">Esqueceu a senha?</a>
+                    </fieldset>
+
+                    <button type="submit" class="submit-btn">Login</button>
+
+                    <fieldset class="login-cadastro">
+                        <p>Não tem uma conta? <a href="#" class="link-cadastro">Cadastro</a></p>
+                    </fieldset>
+                </form>
             </section>
         </article>
     </main>
@@ -110,5 +170,8 @@
         </div>
     </footer>
 </body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </html>

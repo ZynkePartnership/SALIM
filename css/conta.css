@@ -1,0 +1,157 @@
+/*-----===MAIN===-----*/
+main{
+    min-height: 60vh;
+    background: linear-gradient(180deg, slateblue 27.5%, white 27.5%)
+}
+
+/*-----===ARTICLE===-----*/
+article{
+    min-height: 400px;
+    height: 70%;
+    min-width: 400px;
+    width: 30%;
+    background-color: transparent;
+    border: 2px solid slateblue;
+    border-radius: 1em;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    color: slateblue;
+    background-color: white;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: .5em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+section{
+    width: 85%;
+}
+section h2{
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/*---=CAMPO=---*/
+fieldset{
+    border: none;
+    margin: 2em 0;
+}
+.campo-email, .campo-senha, .campo-usuario{
+    position: relative;
+    height: 2em;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid slateblue;
+}
+.campo-checkbox{
+    font-size: 16px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-btn{
+    width: 100%;
+    height: 2.5em;
+    color: slateblue;
+    background-color: white;
+    border: solid 2px slateblue;
+    outline: none;
+    border-radius: .5em;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-cadastro{
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-cadastro a{
+    color: slateblue;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*-CONTEÚDO-*/
+.icon{
+    position: absolute;
+    right: 10px;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+.campo-email label, .campo-senha label, .campo-usuario label{
+    position: absolute;
+    top: 90%;
+    left: 1em;
+    transform: translateY(-100%);
+    font-size: 20px;
+    font-weight: bolder;
+    pointer-events: none;
+    transition: .5s;
+}
+.campo-checkbox a{
+    text-decoration: none;
+    color: slateblue;
+}
+
+#email, #senha, #usuario{
+    width: 87%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+#lembrar{
+    accent-color: dodgerblue;
+    margin-right: 3px;
+}
+
+/*-----===EFEITOS===-----*/
+#email:focus~label, #email:valid~label{
+    top: 0px;
+}
+#senha:focus~label, #senha:valid~label{
+    top: 0px;
+}
+#usuario:focus~label, #usuario:valid~label{
+    top: 0px;
+}
+
+.campo-checkbox a:hover{
+    text-decoration: underline;
+}
+
+.submit-btn:hover{
+    color: white;
+    background-color: slateblue;
+}
+
+.login-cadastro a:hover{
+    text-decoration: underline;
+}
