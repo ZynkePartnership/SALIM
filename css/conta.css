@@ -169,7 +169,7 @@ input[type="text"]:focus~label, input[type="text"]:valid~label{
     text-decoration: underline;
 }
 
-.submit-btn:hover{
+.submit-login:hover, .submit-cadastro:hover{
     color: white;
     background-color: slateblue;
 }
