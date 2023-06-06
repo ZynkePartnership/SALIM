@@ -33,10 +33,12 @@ eventForm.addEventListener("submit", function (event) {
 function verifyNome(nome) {
     if (nome.length <= 0) {
         document.getElementById("nome").classList.add("errado");
+        setTimeout(() => {
+            document.getElementById("nome").classList.remove("errado");
+        }, 1600);
         return false;
     }
-    else {
-        document.getElementById("nome").classList.remove("errado");
+    else{
         return true;
     }
 }

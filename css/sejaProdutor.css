@@ -2,12 +2,13 @@
 main {
     flex-direction: column;
     flex-grow: 1;
-    background-color: aquamarine;
+    background-color: white;
 }
 
 article {
     margin: 2.5% 0;
     min-width: 900px;
+    max-width: 1400px;
     width: 95%;
     display: flex;
     align-items: center;
@@ -18,6 +19,7 @@ article {
     overflow: hidden;
     flex-grow: 1;
     background-color: white;
+    box-shadow: 0 0 15px lightgray;
 }
 
 .formulario-container {
@@ -80,8 +82,8 @@ fieldset input,
 fieldset select {
     width: 100%;
     padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
+    border: none;
+    border-bottom: 2px solid slateblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,9 +101,9 @@ fieldset input[type="reset"] {
     margin: 0 1em;
     font-weight: bolder;
     font-size: 24px;
-    color: dodgerblue;
+    color: slateblue;
     background-color: white;
-    border: solid 3px dodgerblue;
+    border: solid 3px slateblue;
     border-radius: 3em;
     cursor: pointer;
     padding: 0;
@@ -188,10 +190,10 @@ fieldset input[type="reset"] {
 .card-btn button:hover{
     color: white;
     border-radius: 2.5em;
-    background-color: dodgerblue;
+    background-color: slateblue;
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover{
     color: white;
-    background-color: dodgerblue;
+    background-color: slateblue;
 }
