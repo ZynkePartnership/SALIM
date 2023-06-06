@@ -44,10 +44,6 @@
 
     <main>
         <article>
-            <span class="icon-close"><ion-icon name="close">
-                </ion-icon>
-            </span>
-
             <section id="login">
                 <h2>Login</h2>
 
@@ -61,7 +57,7 @@
                     <fieldset class="campo-senha">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                         <input type="password" name="senha" id="senha" required>
-                        <label for="email">Senha</label>
+                        <label for="senha">Senha</label>
                     </fieldset>
 
                     <fieldset class="campo-checkbox">
@@ -91,7 +87,7 @@
 
                     <fieldset class="campo-email">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" name="email" id="email"required>
+                        <input type="email" name="email" id="email" required>
                         <label for="email">Email</label>
                     </fieldset>
 
@@ -103,15 +99,14 @@
 
                     <fieldset class="campo-checkbox">
                         <label for="lembrar">
-                            <input type="checkbox" name="lembrar" id="lembrar">Lembre-se de mim
+                            <input type="checkbox" name="lembrar" id="lembrar">Li e concordo com os Termos de Serviço
                         </label>
-                        <a href="#">Esqueceu a senha?</a>
                     </fieldset>
 
-                    <button type="submit" class="submit-btn">Login</button>
+                    <button type="submit" class="submit-btn">Cadastrar</button>
 
                     <fieldset class="login-cadastro">
-                        <p>Não tem uma conta? <a href="#" class="link-cadastro">Cadastro</a></p>
+                        <p>Já tem uma conta? <a href="#" class="link-login">Entrar</a></p>
                     </fieldset>
                 </form>
             </section>
@@ -171,6 +166,7 @@
     </footer>
 </body>
 
+<script src="../js/conta.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 

@@ -1,41 +1,46 @@
+/*-----===UNIVERSAL===-----*/
+
 /*-----===MAIN===-----*/
 main{
-    min-height: 60vh;
-    background: linear-gradient(180deg, slateblue 27.5%, white 27.5%)
+    min-height: 75vh;
 }
 
 /*-----===ARTICLE===-----*/
 article{
-    min-height: 400px;
-    height: 70%;
-    min-width: 400px;
-    width: 30%;
+    height: 450px;
+    width: 400px;
     background-color: transparent;
-    border: 2px solid slateblue;
+    border: 2px solid white;
     border-radius: 1em;
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 15px lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: height .3s ease;
     overflow: hidden;
 }
+article.cadastro-ativo{
+    height: 500px;
+}
+article.cadastro-ativo section#login{
+    transform: translateX(-400px);
+    transition: transform .3s ease;
+}
+section#login{
+    transition: transform .3s ease;
+    transform: translateX(0);
+}
 
-.icon-close{
+article.cadastro-ativo section#cadastro{
+    transition: transform .3s ease;
+    transform: translateX(0);
+}
+section#cadastro{
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    color: slateblue;
-    background-color: white;
-    font-size: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom-left-radius: .5em;
-    cursor: pointer;
-    z-index: 1;
+    transition: transform .3s ease;
+    transform: translateX(400px);
 }
 
 section{
@@ -43,7 +48,7 @@ section{
 }
 section h2{
     font-size: 32px;
-    color: white;
+    color: black;
     text-align: center;
     margin-bottom: 2em;
 }
@@ -116,7 +121,7 @@ fieldset{
     color: slateblue;
 }
 
-#email, #senha, #usuario{
+#email, #senha, #user{
     width: 87%;
     height: 100%;
     background: transparent;
@@ -128,7 +133,7 @@ fieldset{
 }
 
 #lembrar{
-    accent-color: dodgerblue;
+    accent-color: slateblue;
     margin-right: 3px;
 }
 
@@ -139,7 +144,7 @@ fieldset{
 #senha:focus~label, #senha:valid~label{
     top: 0px;
 }
-#usuario:focus~label, #usuario:valid~label{
+#user:focus~label, #user:valid~label{
     top: 0px;
 }
 
