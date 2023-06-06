@@ -49,6 +49,7 @@
             <h2 class="email-senha">EMAIL/SENHA incorreta!</h2>
             <h2 class="usuario-inexistente">USUÁRIO não encontrado!</h2>
 
+            <h2 class="usuario-existente">USUÁRIO já está em uso!</h2>
             <h2 class="email-registrado">O EMAIL já foi registrado!</h2>
             <h2 class="preencha">Preencha todos os campos!</h2>
         </div>
@@ -59,10 +60,10 @@
                 <h2>Login</h2>
 
                 <form action="#">
-                    <fieldset class="campo-email">
+                    <fieldset class="campo-usuario">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" name="emailL" id="emailL" autofocus required>
-                        <label for="emailL">Email</label>
+                        <input type="text" name="userL" id="userL" autofocus required>
+                        <label for="emailL">Usuário</label>
                     </fieldset>
 
                     <fieldset class="campo-senha">
