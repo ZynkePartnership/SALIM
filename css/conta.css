@@ -53,6 +53,22 @@ section h2{
     margin-bottom: 2em;
 }
 
+.email-senha, .usuario-inexistente, .email-registrado, .preencha{
+    position: absolute;
+    top: 25px;
+    font-size: 32px;
+    color: white;
+    border: slateblue;
+    background-color: slateblue;
+    padding: 10px 30px;
+    transition: transform .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: translateY(-100px);
+}
+.email-senha.ativo, .usuario-inexistente.ativo, .email-registrado.ativo, .preencha.ativo{
+    transition: transform .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: translateY(10px);
+}
+
 /*---=CAMPO=---*/
 fieldset{
     border: none;
@@ -73,7 +89,7 @@ fieldset{
     justify-content: space-between;
 }
 
-.submit-btn{
+.submit-cadastro, .submit-login{
     width: 100%;
     height: 2.5em;
     color: slateblue;
@@ -121,7 +137,7 @@ fieldset{
     color: slateblue;
 }
 
-#email, #senha, #user{
+input[type="email"], input[type="password"], input[type="text"]{
     width: 87%;
     height: 100%;
     background: transparent;
@@ -132,19 +148,19 @@ fieldset{
     padding-left: 5px;
 }
 
-#lembrar{
+input[type="checkbox"]{
     accent-color: slateblue;
     margin-right: 3px;
 }
 
 /*-----===EFEITOS===-----*/
-#email:focus~label, #email:valid~label{
+input[type="email"]:focus~label, input[type="email"]:valid~label{
     top: 0px;
 }
-#senha:focus~label, #senha:valid~label{
+input[type="password"]:focus~label, input[type="password"]:valid~label{
     top: 0px;
 }
-#user:focus~label, #user:valid~label{
+input[type="text"]:focus~label, input[type="text"]:valid~label{
     top: 0px;
 }
 

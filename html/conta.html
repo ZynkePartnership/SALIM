@@ -14,7 +14,9 @@
     <header>
         <div class="logo">
             <figure class="logo-img-container">
-                <img src="" alt="SALIMLogo" class="logo-img">
+                <a href="#">
+                    <img src="" alt="SALIMLogo" class="logo-img">
+                </a>
             </figure>
 
             <div class="ham-btn">
@@ -43,31 +45,40 @@
     </header>
 
     <main>
+        <div class="avisos">
+            <h2 class="email-senha">EMAIL/SENHA incorreta!</h2>
+            <h2 class="usuario-inexistente">USUÁRIO não encontrado!</h2>
+
+            <h2 class="email-registrado">O EMAIL já foi registrado!</h2>
+            <h2 class="preencha">Preencha todos os campos!</h2>
+        </div>
+
         <article>
             <section id="login">
+
                 <h2>Login</h2>
 
                 <form action="#">
                     <fieldset class="campo-email">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" name="email" id="email" autofocus required>
-                        <label for="email">Email</label>
+                        <input type="email" name="emailL" id="emailL" autofocus required>
+                        <label for="emailL">Email</label>
                     </fieldset>
 
                     <fieldset class="campo-senha">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" name="senha" id="senha" required>
-                        <label for="senha">Senha</label>
+                        <input type="password" name="senhaL" id="senhaL" required>
+                        <label for="senhaL">Senha</label>
                     </fieldset>
 
                     <fieldset class="campo-checkbox">
                         <label for="lembrar">
-                            <input type="checkbox" name="lembrar" id="lembrar">Lembre-se de mim
+                            <input type="checkbox" name="lembrar" id="lembrarL">Lembre-se de mim
                         </label>
                         <a href="#">Esqueceu a senha?</a>
                     </fieldset>
 
-                    <button type="submit" class="submit-btn">Login</button>
+                    <button type="submit" class="submit-login">Login</button>
 
                     <fieldset class="login-cadastro">
                         <p>Não tem uma conta? <a href="#" class="link-cadastro">Cadastro</a></p>
@@ -81,29 +92,29 @@
                 <form action="#">
                     <fieldset class="campo-usuario">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" name="user" id="user" autofocus required>
-                        <label for="user">Usuario</label>
+                        <input type="text" name="userC" id="userC" autofocus required>
+                        <label for="userC">Usuario</label>
                     </fieldset>
 
                     <fieldset class="campo-email">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" name="email" id="email" required>
-                        <label for="email">Email</label>
+                        <input type="email" name="emailC" id="emailC" required>
+                        <label for="emailC">Email</label>
                     </fieldset>
 
                     <fieldset class="campo-senha">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" name="senha" id="senha" required>
-                        <label for="email">Senha</label>
+                        <input type="password" name="senhaC" id="senhaC" required>
+                        <label for="senhaC">Senha</label>
                     </fieldset>
 
                     <fieldset class="campo-checkbox">
                         <label for="lembrar">
-                            <input type="checkbox" name="lembrar" id="lembrar">Li e concordo com os Termos de Serviço
+                            <input type="checkbox" name="lembrar" id="lembrarC">Li e concordo com os Termos de Serviço
                         </label>
                     </fieldset>
 
-                    <button type="submit" class="submit-btn">Cadastrar</button>
+                    <button type="submit" class="submit-cadastro">Cadastrar</button>
 
                     <fieldset class="login-cadastro">
                         <p>Já tem uma conta? <a href="#" class="link-login">Entrar</a></p>
