@@ -220,16 +220,30 @@ article {
     flex-wrap: wrap;
 }
 
-.eventos-semana h2:first-child {
+.eventos-semana-cabecalho{
     height: 20%;
     width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.eventos-semana-cabecalho h2{
+    height: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: start;
 }
 
+.eventos-semana-conteudo{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .card-semana {
-    height: 75%;
+    height: 100%;
     width: 23%;
     display: flex;
     flex-direction: column;
