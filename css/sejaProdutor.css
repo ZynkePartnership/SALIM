@@ -2,7 +2,7 @@
 main {
     flex-direction: column;
     flex-grow: 1;
-    background-color: white;
+    background: linear-gradient(0, slateblue, white);
 }
 
 article {
@@ -94,6 +94,7 @@ fieldset span{
 }
 
 fieldset label {
+    font-size: 20px;
     font-weight: bold;
     width: 90%;
 }
@@ -107,7 +108,8 @@ fieldset select {
     align-items: center;
     justify-content: center;
     outline: none;
-    transition: all .3s ease-in;
+    transition: all .4s ease-in;
+    font-size: 16px;
 }
 #nome.errado, #data.errado, #tipo.errado, #local.errado{
     border-bottom: solid 3px red;

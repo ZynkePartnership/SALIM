@@ -43,7 +43,7 @@ function verifyNome(nome) {
         document.getElementById("nome").classList.add("errado");
         setTimeout(() => {
             document.getElementById("nome").classList.remove("errado");
-        }, 1600);
+        }, 3000);
         return false;
     }
     else{
@@ -55,7 +55,7 @@ function verifyData(data) {
         document.getElementById("data").classList.add("errado");
         setTimeout(() => {
             document.getElementById("data").classList.remove("errado");
-        }, 1600);
+        }, 3000);
         return false;
     }
     else {
@@ -67,7 +67,7 @@ function verifyTipo(tipo) {
         document.getElementById("tipo").classList.add("errado");
         setTimeout(() => {
             document.getElementById("tipo").classList.remove("errado");
-        }, 1600);
+        }, 3000);
         return false;
     }
     else {
@@ -79,7 +79,7 @@ function verifyLocal(local) {
         document.getElementById("local").classList.add("errado");
         setTimeout(() => {
             document.getElementById("local").classList.remove("errado");
-        }, 1600);
+        }, 3000);
         return false;
     }
     else {
