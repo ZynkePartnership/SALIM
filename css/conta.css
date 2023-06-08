@@ -3,13 +3,14 @@
 /*-----===MAIN===-----*/
 main{
     min-height: 75vh;
+    background: linear-gradient(0deg, slateblue, white);
 }
 
 /*-----===ARTICLE===-----*/
 article{
     height: 450px;
     width: 400px;
-    background-color: transparent;
+    background-color: white;
     border: 2px solid white;
     border-radius: 1em;
     -webkit-backdrop-filter: blur(20px);
