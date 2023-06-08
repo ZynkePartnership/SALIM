@@ -23,7 +23,7 @@ article {
 }
 
 .avisos h2{
-    position: absolute;
+    position: fixed;
     width: 372px;
     top: 25px;
     font-size: 32px;
@@ -36,6 +36,7 @@ article {
     z-index: 400;
 }
 .avisos h2.ativo{
+    position: fixed;
     transition: transform .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     transform: translate(-50%, 10px);
 }
