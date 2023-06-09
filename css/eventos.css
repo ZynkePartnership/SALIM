@@ -6,9 +6,9 @@ main {
 }
 
 /*-----===ASIDE===-----*/
-.banner{
-    min-height: 350px;
-    height: 35vh;
+.banner {
+    min-height: 450px;
+    height: 45vh;
     width: 100%;
     background: url(../img/bannerFesta2.jpeg);
     background-position: center;
@@ -18,7 +18,8 @@ main {
     align-items: center;
     justify-content: center;
 }
-.banner-descricao{
+
+.banner-descricao {
     height: 100%;
     width: 100%;
     background: linear-gradient(0, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.05) 70%);
@@ -27,7 +28,8 @@ main {
     align-items: start;
     justify-content: end;
 }
-.banner-descricao h1{
+
+.banner-descricao h1 {
     margin-left: 6%;
     height: 20%;
     width: 60%;
@@ -35,7 +37,8 @@ main {
     font-weight: 900;
     color: white;
 }
-.banner-descricao span{
+
+.banner-descricao span {
     margin-left: 5%;
     height: 25%;
     width: 60%;
@@ -47,15 +50,13 @@ main {
 article,
 .carousel-container,
 .carousel-cabecalho,
-.carousel,
-.carousel-item,
-.item-descricao{
+.item-descricao {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-article{
+article {
     transform: translateY(-1em);
     height: 460vh;
     width: 100%;
@@ -63,10 +64,10 @@ article{
     border-radius: 1em;
     flex-direction: column;
     justify-content: space-between;
-    padding: 140px 0 80px 0;
+    padding: 100px 0 80px 0;
 }
 
-.carousel-container{
+.carousel-container {
     background-color: white;
     height: 9%;
     width: 95%;
@@ -75,22 +76,25 @@ article{
     justify-content: space-between;
 }
 
-.carousel-cabecalho{
+.carousel-cabecalho {
     height: 15%;
     width: 95%;
     font-size: 18px;
     justify-content: space-between;
 }
-.carousel-cabecalho h2{
+
+.carousel-cabecalho h2 {
     height: 100%;
     width: 25%;
 }
-.cabecalho-btn{
+
+.cabecalho-btn {
     height: 100%;
     min-width: 100px;
     width: 5%;
 }
-.cabecalho-btn button{
+
+.cabecalho-btn button {
     height: 2em;
     width: 2em;
     border: solid 2px lightgray;
@@ -102,23 +106,49 @@ article{
     cursor: pointer;
 }
 
-.carousel{
-    height: 83%;
-    width: 99%;
-    justify-content: space-around;
+.prevBtn.desativado {
+    color: gray;
 }
 
-.carousel-item{
+.nxtBtn.desativado {
+    color: gray;
+}
+
+.carousel-visible {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+}
+
+.carousel {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    transition: transform .3s ease;
+}
+
+.carousel-item {
+    flex: 0 0 23%;
     height: 100%;
-    width: 23%;
-    flex-direction: column;
-    justify-content: space-around;
+    margin: 0 .5%;
     border-radius: .75em;
     transition: all .3s ease;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.item-img{
+
+.close-button {
+    display: none;
+}
+
+.item-img {
     width: 100%;
     height: 65%;
     border-radius: .75em;
@@ -126,17 +156,20 @@ article{
     box-shadow: 0 0 5px lightgray;
     transition: all .3s ease;
 }
-.item-descricao{
-    height: 40%;
+
+.item-descricao {
+    height: 35%;
     width: 90%;
     flex-direction: column;
     align-items: start;
+    justify-content: space-evenly;
 }
 
 /*-----===EFEITOS===-----*/
-.carousel-item:hover{
-    box-shadow: 0 0 30px lightgray;
+.carousel-item:hover {
+    box-shadow: 0 0 15px lightgray;
 }
-.carousel-item:has(:hover) .item-img{
+
+.carousel-item:has(:hover) .item-img {
     border-radius: 0;
 }
