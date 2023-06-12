@@ -2,7 +2,7 @@
 main {
     flex-direction: column;
     flex-grow: 1;
-    background-color: white;
+    background: linear-gradient(0, slateblue, white);
 }
 
 article {
@@ -20,6 +20,25 @@ article {
     flex-grow: 1;
     background-color: white;
     box-shadow: 0 0 15px lightgray;
+}
+
+.avisos h2{
+    position: fixed;
+    width: 372px;
+    top: 25px;
+    font-size: 32px;
+    color: white;
+    border: slateblue;
+    background-color: slateblue;
+    padding: 10px 30px;
+    transition: transform .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: translate(-50%, -150px);
+    z-index: 400;
+}
+.avisos h2.ativo{
+    position: fixed;
+    transition: transform .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: translate(-50%, 10px);
 }
 
 .formulario-container {
@@ -75,6 +94,7 @@ fieldset span{
 }
 
 fieldset label {
+    font-size: 20px;
     font-weight: bold;
     width: 90%;
 }
@@ -83,14 +103,16 @@ fieldset select {
     width: 100%;
     padding: 1em;
     border: none;
-    border-bottom: 2px solid slateblue;
+    border-bottom: 3px solid slateblue;
     display: flex;
     align-items: center;
     justify-content: center;
     outline: none;
+    transition: all .4s ease-in;
+    font-size: 16px;
 }
 #nome.errado, #data.errado, #tipo.errado, #local.errado{
-    border: solid 3px red;
+    border-bottom: solid 3px red;
 }
 
 fieldset input[type="submit"],

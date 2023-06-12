@@ -1,6 +1,8 @@
 /*-----===VARIÁVEIS===-----*/
 const eventForm = document.querySelector('form');
 const eventCard = document.getElementById('eventos-criados');
+const avisoCampo = document.querySelector(".avisos h2");
+
 const events = [];
 
 /*-----===EVENTOS===-----*/
@@ -27,6 +29,12 @@ eventForm.addEventListener("submit", function (event) {
 
         eventForm.reset();
     }
+    else{
+        avisoCampo.classList.add("ativo");
+        setTimeout(() =>{
+            avisoCampo.classList.remove("ativo");
+        }, 1600)
+    }
 })
 
 /*-----===FUNÇÕES===-----*/
@@ -35,7 +43,7 @@ function verifyNome(nome) {
         document.getElementById("nome").classList.add("errado");
         setTimeout(() => {
             document.getElementById("nome").classList.remove("errado");
-        }, 1600);
+        }, 3000);
         return false;
     }
     else{
@@ -45,30 +53,36 @@ function verifyNome(nome) {
 function verifyData(data) {
     if (data.length <= 0) {
         document.getElementById("data").classList.add("errado");
+        setTimeout(() => {
+            document.getElementById("data").classList.remove("errado");
+        }, 3000);
         return false;
     }
     else {
-        document.getElementById("data").classList.remove("errado");
         return true;
     }
 }
 function verifyTipo(tipo) {
     if (tipo.length <= 0) {
         document.getElementById("tipo").classList.add("errado");
+        setTimeout(() => {
+            document.getElementById("tipo").classList.remove("errado");
+        }, 3000);
         return false;
     }
     else {
-        document.getElementById("tipo").classList.remove("errado");
         return true;
     }
 }
 function verifyLocal(local) {
     if (local.length <= 0) {
         document.getElementById("local").classList.add("errado");
+        setTimeout(() => {
+            document.getElementById("local").classList.remove("errado");
+        }, 3000);
         return false;
     }
     else {
-        document.getElementById("local").classList.remove("errado");
         return true;
     }
 }

@@ -1,6 +1,6 @@
 /*-----===MAIN===-----*/
 main {
-    height: 80em;
+    height: 75em;
 }
 
 /*-----===ARTICLE===-----*/
@@ -34,7 +34,7 @@ article {
 .nxtItem {
     height: 2em;
     width: 2em;
-    border: solid 3px dodgerblue;
+    border: solid 2px lightgray;
     border-radius: 1.5em;
     color: dodgerblue;
     font-size: 18px;
