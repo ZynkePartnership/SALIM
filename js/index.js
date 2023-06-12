@@ -2,13 +2,15 @@ const carouselVisible = document.querySelector(".carousel-visible");
 const carousel = carouselVisible.querySelector(".carousel");
 const prevButton = document.querySelectorAll(".prvItem");
 const nextButton = document.querySelectorAll(".nxtItem");
-const itemWidth = carousel.querySelector(".carousel-item").offsetWidth;
-const maxIndex = Math.floor(carousel.scrollWidth / itemWidth) - 1;
 
 let currentIndex = 0;
 
 function moveToNextItem() {
-    if (currentIndex < maxIndex) {
+    const itemWidth = carousel.querySelector(".carousel-item").offsetWidth;
+    const containerWidth = carouselVisible.offsetWidth;
+    const maxVisibleIndex = Math.floor(carousel.scrollWidth / itemWidth) - Math.floor(containerWidth / itemWidth);
+    
+    if (currentIndex < maxVisibleIndex) {
         currentIndex++;
         carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
@@ -16,6 +18,8 @@ function moveToNextItem() {
 }
 
 function moveToPrevItem() {
+    const itemWidth = carousel.querySelector(".carousel-item").offsetWidth;
+    
     if (currentIndex > 0) {
         currentIndex--;
         carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
@@ -24,24 +28,33 @@ function moveToPrevItem() {
 }
 
 function checkLastItem() {
+    const itemWidth = carousel.querySelector(".carousel-item").offsetWidth;
     const containerWidth = carouselVisible.offsetWidth;
     const visibleItems = Math.floor(containerWidth / itemWidth);
     const maxVisibleIndex = Math.floor(carousel.scrollWidth / itemWidth) - visibleItems;
 
     if (currentIndex >= maxVisibleIndex) {
-        nextButton.classList.add("disabled");
-        nextButton.disabled = true;
+        nextButton.forEach(button => {
+            button.classList.add("disabled");
+            button.disabled = true;
+        });
     } else {
-        nextButton.classList.remove("disabled");
-        nextButton.disabled = false;
+        nextButton.forEach(button => {
+            button.classList.remove("disabled");
+            button.disabled = false;
+        });
     }
 
     if (currentIndex === 0) {
-        prevButton.classList.add("disabled");
-        prevButton.disabled = true;
+        prevButton.forEach(button => {
+            button.classList.add("disabled");
+            button.disabled = true;
+        });
     } else {
-        prevButton.classList.remove("disabled");
-        prevButton.disabled = false;
+        prevButton.forEach(button => {
+            button.classList.remove("disabled");
+            button.disabled = false;
+        });
     }
 }
 

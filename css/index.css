@@ -300,3 +300,10 @@ article {
 .card-semana:has(:hover) .semana-img {
     border-radius: 0;
 }
+
+/*----------=====MEDIA QUERY=====----------*/
+@media (max-width: 1024px) {
+    .carousel-item{
+        flex: 0 0 25%;
+    }
+}
