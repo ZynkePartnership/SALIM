@@ -55,3 +55,29 @@ function activateCarousels() {
 
 //----------======|||MODAL|||======----------//
 /*---=ABRIR INGRESSOS=---*/
+const cardsGen = document.querySelectorAll(".carousel-item");
+const modal = document.querySelector(".modal");
+const fechaModal = document.querySelector(".close-button");
+
+cardsGen.forEach((card) => {
+    card.addEventListener("click", () => {
+        const descricaoData = document.querySelector(".item-descricao > span:first-of-type");
+        const descricaoNome = document.querySelector(".item-descricao > h2");
+        const descricaoLocal = document.querySelector(".item-descricao > span:nth-of-type(2)");
+
+        popularModal(descricaoData, descricaoNome, descricaoLocal);
+
+        modal.classList.add("show");
+    });
+});
+
+fechaModal.addEventListener("click", () => {
+    modal.classList.remove("show");
+});
+
+/*---=POPULAR MODAL=---*/
+function popularModal(data, nome, local){
+    const modalConteudoCabecalho = document.querySelector(".modal-conteudo-descricao-titulo");
+    
+    modalConteudoCabecalho.textContent = nome;
+}
