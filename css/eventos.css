@@ -5,6 +5,45 @@ main {
     background-color: white;
 }
 
+main.desativado{
+}
+
+/*-----===MODAL===-----*/
+.modal{
+    height: 80%;
+    width: 90%;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    border-radius: 1em;
+    background: rgb(100, 100, 100);
+    z-index: 999;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+.modal-img-container{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-img{
+    height: 100%;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.modal-conteudo-container{
+    height: 100%;
+    width: 55%;
+    background: white;
+}
+
 /*-----===ASIDE===-----*/
 .banner {
     min-height: 450px;
@@ -109,13 +148,13 @@ article {
 .prevBtn.desativado {
     border: solid 2px black;
     color: black;
-    opacity: .5;
+    opacity: .3;
 }
 
 .nxtBtn.desativado {
     border: solid 2px black;
     color: black;
-    opacity: .5;
+    opacity: .3;
 }
 
 .carousel-visible {
