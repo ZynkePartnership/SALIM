@@ -5,10 +5,10 @@ main {
     background-color: white;
 }
 
-main.desativado{
-}
-
 /*-----===MODAL===-----*/
+.modal{
+    display: none;
+}
 .modal{
     height: 80%;
     width: 90%;
@@ -25,23 +25,110 @@ main.desativado{
     overflow: hidden;
 }
 
-.modal-img-container{
-    height: 100%;
-    width: 45%;
+.close-button {
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 1em;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: slateblue;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.modal-img{
-    height: 100%;
-    width: 100%;
-    background-color: aquamarine;
+.close-button ion-icon{
+    width: 90%;
+    height: 90%;
+    filter: invert(1);
 }
 
 .modal-conteudo-container{
     height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.modal-conteudo-descricao{
+    height: 100%;
     width: 55%;
-    background: white;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.modal-conteudo-descricao-titulo{
+    height: 40%;
+    width: 90%;
+    background-color: white;
+}
+.modal-conteudo-descricao-descricao{
+    height: 55%;
+    width: 90%;
+    background-color: white;
+}
+
+.modal-conteudo-ingressos{
+    height: 100%;
+    width: 45%;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: start;
+    overflow: auto;
+}
+.modal-conteudo-ingressos > h1{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.modal-conteudo-ingressos > div{
+    margin-top: 30px;
+    width: 90%;
+    min-height: 40px;
+    background-color: white;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.modal-conteudo-ingressos > div > div{
+    height: 40px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.modal-conteudo-ingressos > div > ul{
+    display: none;
+}
+.modal-conteudo-ingressos > div > ul.show{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-conteudo-ingressos > div > ul > li{
+    display: none;
+}
+.modal-conteudo-ingressos > div > ul > li.show{
+    height: 40px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*-----===ASIDE===-----*/
@@ -185,10 +272,6 @@ article {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.close-button {
-    display: none;
 }
 
 .item-img {

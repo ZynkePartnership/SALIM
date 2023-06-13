@@ -1,4 +1,4 @@
-//-----===CARROSSEL===-----//
+//----------======|||CARROSSEL|||======----------//
 // Chame a função para ativar os carrosséis
 activateCarousels();
 
@@ -53,25 +53,5 @@ function activateCarousels() {
     });
 }
 
-//-----===MODAL===-----//
-// Adicione um evento de clique ao botão de fechar a janela modal
-const closeButton = document.querySelector(".close-button");
-closeButton.addEventListener("click", closeModal);
-
-function openModal(content) {
-    const modalContainer = document.querySelector(".modal-container");
-    const modalContent = document.querySelector(".modal-content-inner");
-    
-    modalContent.innerHTML = content;
-    modalContainer.style.display = "block";
-}
-
-function closeModal() {
-    const modalContainer = document.querySelector(".modal-container");
-    modalContainer.style.display = "none";
-}
-
-function handleItemClick(event) {
-    const itemContent = event.currentTarget.innerHTML;
-    openModal(itemContent);
-}
+//----------======|||MODAL|||======----------//
+/*---=ABRIR INGRESSOS=---*/
