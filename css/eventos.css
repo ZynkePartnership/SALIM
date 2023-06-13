@@ -97,7 +97,7 @@ article {
 .cabecalho-btn button {
     height: 2em;
     width: 2em;
-    border: solid 2px lightgray;
+    border: solid 2px dodgerblue;
     border-radius: 1.5em;
     color: dodgerblue;
     font-size: 18px;
@@ -107,11 +107,15 @@ article {
 }
 
 .prevBtn.desativado {
-    color: gray;
+    border: solid 2px black;
+    color: black;
+    opacity: .5;
 }
 
 .nxtBtn.desativado {
-    color: gray;
+    border: solid 2px black;
+    color: black;
+    opacity: .5;
 }
 
 .carousel-visible {
