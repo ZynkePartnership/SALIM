@@ -303,7 +303,5 @@ article {
 
 /*----------=====MEDIA QUERY=====----------*/
 @media (max-width: 1024px) {
-    .carousel-item{
-        flex: 0 0 25%;
-    }
+    
 }
